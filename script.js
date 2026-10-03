@@ -25,7 +25,7 @@ const root=document.documentElement;
 $("#theme").onclick=()=>{const dark=getComputedStyle(root).getPropertyValue("--bg").trim()==="#0e0f14";root.dataset.theme=dark?"light":"dark";try{localStorage.setItem("th",root.dataset.theme)}catch(e){}};
 try{const t=localStorage.getItem("th");if(t)root.dataset.theme=t}catch(e){}
 // typing
-const words=["beautiful interfaces","scalable backends","AI-powered tools","things people love"];
+const words=["beautiful interfaces","AI-powered tools"];
 let wi=0,ci=0,del=false;
 (function tick(){const w=words[wi];ci+=del?-1:1;$("#type").textContent=w.slice(0,ci);
 let d=del?35:75;if(!del&&ci===w.length){del=true;d=1400}else if(del&&ci===0){del=false;wi=(wi+1)%words.length;d=400}setTimeout(tick,d)})();
