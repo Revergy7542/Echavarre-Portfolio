@@ -51,7 +51,7 @@ $("#form").onsubmit=e=>{e.preventDefault();const s=encodeURIComponent("Portfolio
 const b=encodeURIComponent($("#fm").value+"\n\n— "+$("#fn").value+" ("+$("#fe").value+")");
 location.href=`mailto:alex@example.com?subject=${s}&body=${b}`;toast("Opening your email app…")};
 //resume download
-$("#resume").onclick = () => { const a = document.createElement("a");a.href = "resume/Echavarre_Resume_PFP.pdf";a.download = "Echavarre_Resume_PFP.pdf";
+$("#resume").onclick = () => { const a = document.createElement("a");a.href = "Echavarre_Resume_PFP.pdf";a.download = "Echavarre_Resume_PFP.pdf";
 document.body.appendChild(a);a.click();a.remove();toast("Résumé downloaded ✓");};
 // reveal, bars, counters, progress
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");x.target.querySelectorAll("[data-w]").forEach(i=>i.style.width=i.dataset.w+"%")}}),{threshold:.15});
